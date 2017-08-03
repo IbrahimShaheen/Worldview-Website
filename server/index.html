@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Worldview Profile Survey</title>
+    <script src="lib/jquery-3.1.0.min.js"></script>
+    <script src="lib/require.js"></script>
+    <script src="worldviewCalculator.js"></script>
+    <link rel="stylesheet" href="home.css" />
+    <link rel="icon" type="image/png" href="pics/favicon.png">
+</head>
+
+<body>
+    <div id="header">
+        <h1>Worldview Profile Survey</h1>
+        <h2>(Find out why you act the way you do!)</h2>
+        <p>
+            Just as a personality survey suggest that you are outgoing or quiet, a doer or thinker, so this survey will help you understand why you do the things you do based on your belief systems. Every person has a worldview, some are well defined; however, most
+            are in process. These questions will help reveal what major worldviews you currently hold. All worldviews are composed of beliefs in at least five major areas.
+        </p>
+        <h3>Check any of the statements that apply to your beliefs. If none of the statements apply, feel free to leave the question empty.</h2>
+        <h3>This survey has <span id="numberOfQuestions"></span> questions. It should take about 15 minutes.</h2>
+    </div>
+    <div class="questionSet" id="god">
+        <h3>Worldview of God</h3>
+        <h4>Concept of:</h4>
+        <ul>
+            <li><input type="checkbox" />God/s exist in both supernatural and natural realm.</li>
+            <li><input type="checkbox" />An impersonal oneness that makes up the universe.</li>
+            <li><input type="checkbox" />There is no god.</li>
+        </ul>
+
+        <h4>Attributes of God</h4>
+        <ul>
+            <li><input type="checkbox" />Sometimes God does good or bad.</li>
+            <li><input type="checkbox" />God does only good.</li>
+            <li><input type="checkbox" />Cannot do good or bad.</li>
+            <li><input type="checkbox" />Is totally impersonal.</li>
+            <li><input type="checkbox" />Does not apply.</li>
+        </ul>
+
+        <h4>God is</h4>
+        <ul>
+            <li><input type="checkbox" />Abstract.</li>
+            <li><input type="checkbox" />Unknowable.</li>
+            <li><input type="checkbox" />Relational, man can have relationship with God.</li>
+            <li><input type="checkbox" />Hears us, loves us.</li>
+            <li><input type="checkbox" />Gives meaning to life.</li>
+            <li><input type="checkbox" />God is nature, so my purpose comes from nature.</li>
+            <li><input type="checkbox" />Grants forgiveness.</li>
+            <li><input type="checkbox" />The concept of God is false.</li>
+        </ul>
+    </div>
+    <div class="questionSet" id="reality">
+        <h3>Worldview of Ultimate Reality</h3>
+        <h4>Universe origin</h4>
+        <ul>
+            <li><input type="checkbox" />God created from nothing our world and the universe.</li>
+            <li><input type="checkbox" />The universe is eternal, has no beginning.</li>
+            <li><input type="checkbox" />The universe is a product of evolution.  From nothing came something.</li>
+        </ul>
+
+        <h4>Universe and God</h4>
+        <ul>
+            <li><input type="checkbox" />God created the world but is an absentee landlord.</li>
+            <li><input type="checkbox" />God is involved in maintaining the universe.</li>
+            <li><input type="checkbox" />The physical universe is God.</li>
+            <li><input type="checkbox" />The universe exists, but God does not exist.</li>
+        </ul>
+
+        <h4>Universe and me</h4>
+        <ul>
+            <li><input type="checkbox" />I evolved from within the universe.</li>
+            <li><input type="checkbox" />I am a separate creation from the universe.</li>
+            <li><input type="checkbox" />I am part of the universe, one in essence.</li>
+            <li><input type="checkbox" />I am the universe.</li>
+        </ul>
+
+        <h4>Universe and miracles</h4>
+        <ul>
+            <li><input type="checkbox" />Miracles do occur today that are totally unexplainable by science.</li>
+            <li><input type="checkbox" />Miracles are only yet to be explained as natural phenomenon.</li>
+            <li><input type="checkbox" />Miracles come from a power greater than mankind.</li>
+            <li><input type="checkbox" />Miracles are the missing links in the evolutionary chain.</li>
+            <li><input type="checkbox" />God is the source of miracles.</li>
+            <li><input type="checkbox" />Miracles are not real, as they cannot be scientifically proven.</li>
+        </ul>
+
+        <h4>Universe and order</h4>
+        <ul>
+            <li><input type="checkbox" />All the design we see and rely on happens repeatedly by chance, random selection.</li>
+            <li><input type="checkbox" />There is order in the universe, it shows an intelligent designer.</li>
+            <li><input type="checkbox" />The preciseness of order compliments the “Big Bang Theory.”</li>
+            <li><input type="checkbox" />Random chance is the only way to explain the apparent order in the universe.</li>
+            <li><input type="checkbox" />A balance of positive and negative.</li>
+        </ul>
+    </div>
+    <div class="questionSet" id="knowledge">
+        <h3>Worldview of Knowledge</h3>
+        <h4>Origin of knowledge</h4>
+        <ul>
+            <li><input type="checkbox" />Developed over time out of necessity for survival.</li>
+            <li><input type="checkbox" />Man is born with some preprogrammed knowledge from his creator.</li>
+            <li><input type="checkbox" />Knowledge is unattainable, the physical brain is real but the mind does not exist.</li>
+            <li><input type="checkbox" />Source of knowledge is God.</li>
+            <li><input type="checkbox" />Knowledge is a given and has no source or origin.</li>
+            <li><input type="checkbox" />Knowledge is the divine nature within me.</li>
+        </ul>
+
+        <h4>How we come to know something</h4>
+        <ul>
+            <li><input type="checkbox" />Knowledge only comes though the five senses.</li>
+            <li><input type="checkbox" />Knowledge comes from the supernatural.</li>
+            <li><input type="checkbox" />Knowledge can be attained through the reasoning process.</li>
+            <li><input type="checkbox" />Knowledge came through Darwin’s evolutionary process.</li>
+            <li><input type="checkbox" />Knowledge is only a deterministic process.</li>
+        </ul>
+
+        <h4>Thought</h4>
+        <ul>
+            <li><input type="checkbox" />Thoughts are determined by biological stimuli, not principles of reason.</li>
+            <li><input type="checkbox" />All thought is part of the cosmic oneness and all is true.</li>
+            <li><input type="checkbox" />Thoughts have meaning, because I have ultimate purpose and value.</li>
+        </ul>
+
+        <h4>Knowledge related to history</h4>
+        <ul>
+            <li><input type="checkbox" />There is no absolute meaning, so history holds no meaning.</li>
+            <li><input type="checkbox" />Absolute meaning exists, therefore history holds meaning.</li>
+            <li><input type="checkbox" />The only meaning history holds is what I assign it.</li>
+        </ul>
+    </div>
+    <div class="questionSet" id="humankind">
+        <h3>Worldview of Humankind</h3>
+        <h4>Views of:</h4>
+        <ul>
+            <li><input type="checkbox" />Humankind is caught in the illusion of separateness, but actually is identical in essence to the oneness of the universe.</li>
+            <li><input type="checkbox" />Humankind is a complex form of matter.</li>
+            <li><input type="checkbox" />Humankind was created by God to reflect the character of God, and be caretaker of the world.</li>
+        </ul>
+
+        <h4>Humanity and his heart</h4>
+        <ul>
+            <li><input type="checkbox" />Primarily evil.</li>
+            <li><input type="checkbox" />Primarily good.</li>
+            <li><input type="checkbox" />Equally good and evil.</li>
+            <li><input type="checkbox" />Neutral toward good and evil.</li>
+        </ul>
+
+        <h4>Humanity and his views of afterlife (life after death)</h4>
+        <ul>
+            <li><input type="checkbox" />Man will continue to exist eternally in either heaven or hell.</li>
+            <li><input type="checkbox" />Man will advance to some form of spirit world.</li>
+            <li><input type="checkbox" />Man is reincarnated or merges into the impersonal oneness of the universe.</li>
+            <li><input type="checkbox" />Afterlife does not exist.</li>
+        </ul>
+
+        <h4>Humanity and his origin</h4>
+        <ul>
+            <li><input type="checkbox" />Slowly evolved from other life forms.</li>
+            <li><input type="checkbox" />Created  perfectly and without flaw by God.</li>
+            <li><input type="checkbox" />Man is God and comes from God.</li>
+            <li><input type="checkbox" />No initial origin, man is a moment in one infinite substance.</li>
+        </ul>
+
+        <h4>Humanity and his will</h4>
+        <ul>
+            <li><input type="checkbox" />Man has total free will.</li>
+            <li><input type="checkbox" />Man has limited free will.</li>
+            <li><input type="checkbox" />Man has no free will.</li>
+        </ul>
+
+        <h4>Humanity and death</h4>
+        <ul>
+            <li><input type="checkbox" />Go to the dirt, period.</li>
+            <li><input type="checkbox" />A transition into eternity with reward or wrath.</li>
+            <li><input type="checkbox" />Reincarnated into another life form.</li>
+            <li><input type="checkbox" />Absorbed back into the eternal existence of the universe.</li>
+        </ul>
+
+        <h4>Humanity explanation of pain and suffering</h4>
+        <ul>
+            <li><input type="checkbox" />Is to be avoided at all cost.</li>
+            <li><input type="checkbox" />Is the result of man’s rebellion against God.</li>
+            <li><input type="checkbox" />Pain/suffering are not real, these are just words given to describe a chemical reactions of the body.</li>
+            <li><input type="checkbox" />Pain is an illusion.</li>
+        </ul>
+
+        <h4>If faced with great pain or tragedy that was out of my control I would:</h4>
+        <ul>
+            <li><input type="checkbox" />Pray to God.</li>
+            <li><input type="checkbox" />Rely on myself all the more.</li>
+            <li><input type="checkbox" />Seek the divine answer within myself.</li>
+        </ul>
+
+        <h4>Humans view of Deity</h4>
+        <ul>
+            <li><input type="checkbox" />Each man is his own God/Deity.</li>
+            <li><input type="checkbox" />Man is made in Gods image, but man is not Deity.</li>
+            <li><input type="checkbox" />Deity is a concept created by man to explain life.</li>
+            <li><input type="checkbox" />Mankind and the universe are one and the same Deity.</li>
+        </ul>
+
+        <h4>Humans seek meaning and purpose</h4>
+        <ul>
+            <li><input type="checkbox" />Man wants a reason for existence beyond daily life.</li>
+            <li><input type="checkbox" />Is no different than all other life forms, thus seeks in vain.</li>
+            <li><input type="checkbox" />Meaning is created from within oneself.</li>
+            <li><input type="checkbox" />Must look outside of oneself to nature.</li>
+            <li><input type="checkbox" />Meaning comes from the supernatural, excluding the natural.</li>
+            <li><input type="checkbox" />Seeks for nothing.</li>
+        </ul>
+
+        <h4>Humanity is religious because…</h4>
+        <ul>
+            <li><input type="checkbox" />Religion is a product of man’s mind to explain life and how to live.</li>
+            <li><input type="checkbox" />He is born ‘preprogrammed’ to seek his maker.</li>
+            <li><input type="checkbox" />Man sees that God is involved in the affairs of mankind.</li>
+            <li><input type="checkbox" />Man is religious because he is Deity.</li>
+        </ul>
+    </div>
+    <div class="questionSet" id="ethics">
+        <h3>Worldview of Ethics</h3>
+        <h4>Standards</h4>
+        <ul>
+            <li><input type="checkbox" />Set by and for self only.</li>
+            <li><input type="checkbox" />All mankind accepts some universal absolute moral standards.  Example: torturing babies is always wrong.</li>
+            <li><input type="checkbox" />Ethics come from within individual societies.</li>
+            <li><input type="checkbox" />Standards are ‘preprogrammed’ into man’s mind by an outside deity.</li>
+            <li><input type="checkbox" />Standards are always relative to the situation.</li>
+            <li><input type="checkbox" />Man is deity and standards reflect his oneness with universal deity.</li>
+        </ul>
+
+        <h4>Value</h4>
+        <ul>
+            <li><input type="checkbox" />All values are finite and changeable.</li>
+            <li><input type="checkbox" />Value exists because everything comes from a perfect nonhuman deity.</li>
+            <li><input type="checkbox" />Gives man ultimate significance and makes him accountable for his actions to an absolute standard.</li>
+            <li><input type="checkbox" />Life’s value is experience, maximum pleasure and minimum pain.</li>
+            <li><input type="checkbox" />Limited to what has worth for mankind as a whole.</li>
+            <li><input type="checkbox" />Universe is in constant state of change, thus value comes from most recent change.</li>
+        </ul>
+
+        <h4>In life I would rather focus on…</h4>
+        <ul>
+            <li><input type="checkbox" />The journey.</li>
+            <li><input type="checkbox" />The journey and the goal.</li>
+            <li><input type="checkbox" />There is no focus.</li>
+        </ul>
+
+        <h4>To find inner peace I…</h4>
+        <ul>
+            <li><input type="checkbox" />Commune with nature.</li>
+            <li><input type="checkbox" />Pray to God.</li>
+            <li><input type="checkbox" />Meditate on my inner self.</li>
+        </ul>
+
+        <h4>When I want deeper meaning…</h4>
+        <ul>
+            <li><input type="checkbox" />I look for something permanent.</li>
+            <li><input type="checkbox" />I look for something in the moment.</li>
+            <li><input type="checkbox" />There is no deeper meaning.</li>
+            <li><input type="checkbox" />I strive to be one with the universe.</li>
+        </ul>
+
+        <h4>At death I hope to…</h4>
+        <ul>
+            <li><input type="checkbox" />Go to a better place.</li>
+            <li><input type="checkbox" />Go to the dirt.</li>
+            <li><input type="checkbox" />Be reunited into the oneness.</li>
+            <li><input type="checkbox" />Go to heaven and not hell.</li>
+        </ul>
+
+        <h4>The most accurate explanation for pain and suffering is:</h4>
+        <ul>
+            <li><input type="checkbox" />That man has sin and thus evil exist.</li>
+            <li><input type="checkbox" />That pain and suffering are an illusion of life.</li>
+            <li><input type="checkbox" />It is real but can be eliminated by deep meditation.</li>
+            <li><input type="checkbox" />Product of the evolutionary process.</li>
+            <li><input type="checkbox" />Pain and suffering do not exist.</li>
+        </ul>
+    </div>
+    <div class="questionSet" id="generalStatements">
+        <h3>General Statements</h3>
+        <h4>“I believe all life has equal value, therefore it is always wrong to kill and eat an animal.” Just suppose - You and a chicken are on an island with no food.  Would you:</h4>
+        <ul>
+            <li><input type="checkbox" />Kill and eat the chicken, survival of the fittest.</li>
+            <li><input type="checkbox" />Watch both you and the chicken die.</li>
+            <li><input type="checkbox" />Hope the chicken dies first and then eat it.</li>
+            <li><input type="checkbox" />The above statement is false.  Kill and eat the chicken.</li>
+        </ul>
+
+        <h4>"When I kiss my wife I am not feeling love or emotion, it is simply a series of complex chemical and electrical reactions in my brain.”  If you heard this statement you would:</h4>
+        <ul>
+            <li><input type="checkbox" />Agree that since emotions cannot be proven scientifically they are not real.</li>
+            <li><input type="checkbox" />Admit emotions are real and that other things outside of science such as the supernatural might also be real.</li>
+            <li><input type="checkbox" />Think that emotions are the same illusion as pain and suffering.</li>
+        </ul>
+
+        <h4>Last week you discover your lab mate consistently cheats on exams and gets better grades than you and thus wins the coveted paid RA position.  Do you want her to get caught?</h4>
+        <ul>
+            <li><input type="checkbox" />Yes.</li>
+            <li><input type="checkbox" />It doesn’t matter to me.</li>
+            <li><input type="checkbox" />No.</li>
+            <li><input type="checkbox" />I should have cheated too.</li>
+        </ul>
+
+        <h4>Bertrand Russell, a famous cartoonist wrote this.  “Unless you assume God exists, the question of life’s purpose is meaningless.”  Do you find this quote to be:</h4>
+        <ul>
+            <li><input type="checkbox" />True</li>
+            <li><input type="checkbox" />False</li>
+            <li><input type="checkbox" />Meaningless</li>
+        </ul>
+
+        <h4>Life anchor: Psychologists tell us that everyone seeks to have something they can hang on to as a life anchor.  I would like my life anchor to be:</h4>
+        <ul>
+            <li><input type="checkbox" />The view of chance evolution.</li>
+            <li><input type="checkbox" />An impersonal spiritual force.</li>
+            <li><input type="checkbox" />Absolutely nothing.</li>
+            <li><input type="checkbox" />Christ, giver of forgiveness and love.</li>
+            <li><input type="checkbox" />Spiritual power of Nature.</li>
+            <li><input type="checkbox" />Buddha, to merge into nothingness.</li>
+            <li><input type="checkbox" />Confucius, purveyor of thought.</li>
+            <li><input type="checkbox" />Mohammad, prophet of Allah.</li>
+            <li><input type="checkbox" />Wealth, power, influence.</li>
+            <li><input type="checkbox" />Hindu reincarnation.</li>
+            <li><input type="checkbox" />Allah.</li>
+            <li><input type="checkbox" />Yahweh/ Jehovah.</li>
+        </ul>
+    </div>
+    <div id="buttonsDiv">
+        <button id="backToTopButton" type="button">Back To Top</button>
+        <button id="submitButton" type="button">Click Here to See Your Results!</button>
+        <button id="hideResultsButton" type="button">Hide Results</button>
+    </div>
+    <div id="results">
+        <div id="resultsHeader">
+            <p>You answered <span id="questionsAnswered"></span> questions, checking off <span id="statementsChecked"></span> statements in total.</p>
+        </div>
+        <hr>
+        <div id="resultsWorldviewAlignment">
+            <p>The statements you agreed with align with the following worldviews:</p>
+            <ul>
+                <li class="monismResult">Monism: <span id="monismStatements"></span></li>
+                <li class="naturalismResult">Naturalism: <span id="naturalismStatements"></span></li>
+                <li class="theismResult">Theism: <span id="theismStatements"></span></li>
+            </ul>
+            <div class="chartDiv"></div>
+        </div>
+        <hr>
+        <div id="resultsRemainingStatements">
+            <p>The number of remaining statements you could have checked in each worldview are: </p>
+            <ul>
+                <li class="monismResult">Monism: <span id="remainingMonismStatements"></span></li>
+                <li class="naturalismResult">Naturalism: <span id="remainingNaturalismStatements"></span></li>
+                <li class="theismResult">Theism: <span id="remainingTheismStatements"></span></li>
+            </ul>
+            <div class="chartDiv"></div>
+        </div>
+        <hr>
+        <div id="resultsSectionAlignments">
+            <p>Your alignment with each worldview within each section is as follows:</p>
+            <div>
+                <ul>
+                    <p>Worldview of God</p>
+                    <li class="monismResult">Monism: <span></span></li>
+                    <li class="naturalismResult">Naturalism: <span></span></li>
+                    <li class="theismResult">Theism: <span></span></li>
+                </ul>
+                <div class="chartDiv"></div>
+            </div>
+            <div>
+                <ul>
+                    <p>Worldview of Ultimate Reality</p>
+                    <li class="monismResult">Monism: <span></span></li>
+                    <li class="naturalismResult">Naturalism: <span></span></li>
+                    <li class="theismResult">Theism: <span></span></li>
+                </ul>
+                <div class="chartDiv"></div>
+            </div>
+            <div>
+                <ul>
+                    <p>Worldview of Knowledge</p>
+                    <li class="monismResult">Monism: <span></span></li>
+                    <li class="naturalismResult">Naturalism: <span></span></li>
+                    <li class="theismResult">Theism: <span></span></li>
+                </ul>
+                <div class="chartDiv"></div>
+            </div>
+            <div>
+                <ul>
+                    <p>Worldview of Humankind</p>
+                    <li class="monismResult">Monism: <span></span></li>
+                    <li class="naturalismResult">Naturalism: <span></span></li>
+                    <li class="theismResult">Theism: <span></span></li>
+                </ul>
+                <div class="chartDiv"></div>
+            </div>
+            <div>
+                <ul>
+                    <p>Worldview of Ethics</p>
+                    <li class="monismResult">Monism: <span></span></li>
+                    <li class="naturalismResult">Naturalism: <span></span></li>
+                    <li class="theismResult">Theism: <span></span></li>
+                </ul>
+                <div class="chartDiv"></div>
+            </div>
+            <div>
+                <ul>
+                    <p>General Statements</p>
+                    <li class="monismResult">Monism: <span></span></li>
+                    <li class="naturalismResult">Naturalism: <span></span></li>
+                    <li class="theismResult">Theism: <span></span></li>
+                </ul>
+                <div class="chartDiv"></div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <p>Copyright &copy 2016. All rights reserved. Survey designed by Gary Ramm. Website done by Ibrahim Shaheen.</p>
+    </div>
+</body>
+
+</html>
