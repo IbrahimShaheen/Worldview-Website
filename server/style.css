@@ -3,11 +3,11 @@
 h1, h2 {
     text-align: center;
     font-family: "Century Gothic", sans-serif;
-    margin: 20px;
+    margin: 15px;
 }
 
 h1 {
-    margin-top: 70px;
+    margin-top: 50px;
     font-size: 60px;
 }
 
@@ -20,7 +20,7 @@ h1 {
 
 #header p {
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.35);
+    text-align: center;
 }
 
 #header h3 {
@@ -132,15 +132,6 @@ h3, #buttonsDiv {
     background-image: url("pics/bkg_ethics.jpg");
 }
 
-#generalStatements {
-    background-color: rgb(235, 176, 255);
-}
-
-#generalStatements h3 {
-    color: rgb(255, 255, 255);
-    background-image: url("pics/bkg_generalStatements.jpg");
-}
-
 #results, #hideResultsButton {
     display: none;
 }
@@ -184,16 +175,12 @@ button {
 hr {
     clear: left;
     border: 0;
-    height: 2px;
-    background-image: linear-gradient(to right, rgb(103, 103, 103), rgba(0, 0, 0, 0));
+    height: 3px;
+    background-image: linear-gradient(to right, rgb(103, 103, 103)  , rgba(0, 0, 0, 0) 80%);
 }
 
 #results ul {
     float: left;
-}
-
-.monismResult, .naturalismResult, .theismResult {
-    font-weight: bold;
 }
 
 .monismResult {
@@ -217,21 +204,22 @@ hr {
 /*canvases within chartDivs are initialized to these values of width and height*/
 
 #resultsWorldviewAlignment .chartDiv, #resultsRemainingStatements .chartDiv {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     margin-bottom: 20px;
 }
 
 #resultsSectionAlignments .chartDiv {
-    padding: 20px;
+    padding: 10px;
     width: 150px;
     height: 150px;
 }
 
-#resultsSectionAlignments> div {
+#resultsSectionAlignments > div {
     border-style: solid;
     border-width: 1px;
-    overflow: hidden;
+	box-shadow: 7px 7px 21px rgb(135, 135, 135);
+	overflow: hidden;
     float: left;
 }
 
@@ -239,5 +227,6 @@ hr {
     background-color: rgb(195, 195, 195);
     margin: 0px;
     padding: 5px;
+	text-align: center;
     clear: left;
 }

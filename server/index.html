@@ -4,23 +4,24 @@
 <head>
     <meta charset="utf-8" />
     <title>Worldview Profile Survey</title>
-    <script src="lib/jquery-3.1.0.min.js"></script>
-    <script src="lib/require.js"></script>
+    <script src="js libraries/jquery-3.1.0.min.js"></script>
+    <script src="js libraries/require.js"></script>
     <script src="worldviewCalculator.js"></script>
-    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" href="pics/favicon.png">
 </head>
 
 <body>
     <div id="header">
         <h1>Worldview Profile Survey</h1>
-        <h2>(Find out why you act the way you do!)</h2>
+        <h2>Find out why you act the way you do!</h2>
         <p>
             Just as a personality survey suggest that you are outgoing or quiet, a doer or thinker, so this survey will help you understand why you do the things you do based on your belief systems. Every person has a worldview, some are well defined; however, most
             are in process. These questions will help reveal what major worldviews you currently hold. All worldviews are composed of beliefs in at least five major areas.
         </p>
-        <h3>Check any of the statements that apply to your beliefs. If none of the statements apply, feel free to leave the question empty.</h2>
-        <h3>This survey has <span id="numberOfQuestions"></span> questions. It should take about 15 minutes.</h2>
+        <h3>Check any of the statements that apply to your beliefs.</h3>
+        <h3>If none of the statements apply, feel free to leave the question empty.</h3>
+        <h3>This survey has <span id="numberOfQuestions"></span> questions. It should take about 15 minutes.</h3>
     </div>
     <div class="questionSet" id="god">
         <h3>Worldview of God</h3>
@@ -156,10 +157,10 @@
             <li><input type="checkbox" />Afterlife does not exist.</li>
         </ul>
 
-        <h4>Humanity and his origin</h4>
+        <h4>Humanity and it's origin</h4>
         <ul>
             <li><input type="checkbox" />Slowly evolved from other life forms.</li>
-            <li><input type="checkbox" />Created  perfectly and without flaw by God.</li>
+            <li><input type="checkbox" />Created perfectly and without flaw by God.</li>
             <li><input type="checkbox" />Man is God and comes from God.</li>
             <li><input type="checkbox" />No initial origin, man is a moment in one infinite substance.</li>
         </ul>
@@ -280,9 +281,7 @@
             <li><input type="checkbox" />Product of the evolutionary process.</li>
             <li><input type="checkbox" />Pain and suffering do not exist.</li>
         </ul>
-    </div>
-    <div class="questionSet" id="generalStatements">
-        <h3>General Statements</h3>
+
         <h4>“I believe all life has equal value, therefore it is always wrong to kill and eat an animal.” Just suppose - You and a chicken are on an island with no food.  Would you:</h4>
         <ul>
             <li><input type="checkbox" />Kill and eat the chicken, survival of the fittest.</li>
@@ -349,16 +348,6 @@
             <div class="chartDiv"></div>
         </div>
         <hr>
-        <div id="resultsRemainingStatements">
-            <p>The number of remaining statements you could have checked in each worldview are: </p>
-            <ul>
-                <li class="monismResult">Monism: <span id="remainingMonismStatements"></span></li>
-                <li class="naturalismResult">Naturalism: <span id="remainingNaturalismStatements"></span></li>
-                <li class="theismResult">Theism: <span id="remainingTheismStatements"></span></li>
-            </ul>
-            <div class="chartDiv"></div>
-        </div>
-        <hr>
         <div id="resultsSectionAlignments">
             <p>Your alignment with each worldview within each section is as follows:</p>
             <div>
@@ -406,19 +395,10 @@
                 </ul>
                 <div class="chartDiv"></div>
             </div>
-            <div>
-                <ul>
-                    <p>General Statements</p>
-                    <li class="monismResult">Monism: <span></span></li>
-                    <li class="naturalismResult">Naturalism: <span></span></li>
-                    <li class="theismResult">Theism: <span></span></li>
-                </ul>
-                <div class="chartDiv"></div>
-            </div>
         </div>
     </div>
     <div id="footer">
-        <p>Copyright &copy 2016. All rights reserved. Survey designed by Gary Ramm. Website done by Ibrahim Shaheen.</p>
+        <p>Copyright &copy 2017. All rights reserved. Survey designed by Gary Ramm. Website done by Ibrahim Shaheen.</p>
     </div>
 </body>
 

@@ -1,7 +1,7 @@
 "use strict";
 
 (function() {
-    const MONISM_ANSWER_KEY = [ // Each array represents a question. Each array tells which statements in that question contributes to the worldview.
+    const MONISM_ANSWER_KEY = [ // Each array represents a question. It indicates which statements in that question contributes to the worldview.
         [2],
         [3, 4],
         [1, 2, 6],
@@ -138,7 +138,6 @@
             this.knowledge = 0;
             this.humankind = 0;
             this.ethics = 0;
-            this.generalStatements = 0;
             this.total = 0;
             this.remaining = 0;
         }
@@ -232,7 +231,7 @@
                 canvas.height = $(chartDiv).height();
                 chartDiv.appendChild(canvas);
             }
-            require(["lib/chart.js"], function(Chart) {
+            require(["js libraries/chart.js"], function(Chart) {
                 Chart.defaults.global.legend.display = false;
                 Chart.defaults.global.defaultFontSize = 15;
                 var canvases = document.querySelectorAll("canvas");
@@ -249,13 +248,11 @@
     function loadChartData(results) {
         return [
             getPieChartData(results.monism.total, results.naturalism.total, results.theism.total),
-            getPieChartData(results.monism.remaining, results.naturalism.remaining, results.theism.remaining),
             getPieChartData(results.monism.god, results.naturalism.god, results.theism.god),
             getPieChartData(results.monism.reality, results.naturalism.reality, results.theism.reality),
             getPieChartData(results.monism.knowledge, results.naturalism.knowledge, results.theism.knowledge),
             getPieChartData(results.monism.humankind, results.naturalism.humankind, results.theism.humankind),
             getPieChartData(results.monism.ethics, results.naturalism.ethics, results.theism.ethics),
-            getPieChartData(results.monism.generalStatements, results.naturalism.generalStatements, results.theism.generalStatements),
         ]
     }
 
